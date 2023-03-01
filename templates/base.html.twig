@@ -69,11 +69,13 @@
                             {% endif %}
 
                             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                                <a href="" class="nav-item nav-link">Dashboard</a>
+                                <a href="{{ path('admin') }}" class="nav-item nav-link">Dashboard</a>
                                 <a href="{{ path('app_logout') }}" class="nav-item nav-link">Logout</a>
                             {% endif %}
 
+                            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                             <a href="{{ path('register') }}" class="nav-item nav-link">Register</a>
+                            {% endif %}
 
                         </div>
                     </div>
@@ -87,7 +89,7 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="{{ path('home') }}" class="nav-item nav-link active">Home</a>
+                            <a href="{{ path('home') }}" class="nav-item nav-link">Home</a>
                             <a href="{{ path('room.rooms') }}" class="nav-item nav-link">Rooms</a>
                             <a href="{{ path('booking') }}" class="nav-item nav-link">Booking</a>
                             <a href="{{ path('contact') }}" class="nav-item nav-link">Contact</a>

@@ -74,7 +74,7 @@ class RoomController extends AbstractController
         $em->flush();
 
         //Notification
-        $this->addFlash('success', "Room Deleted Successfully");
+//        $this->addFlash('success', "Room Deleted Successfully");
 
         return $this->redirect($this->generateUrl('room.rooms'));
     }
