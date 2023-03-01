@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Contact;
+use App\Entity\HotelContact;
 use App\Entity\NewsLetter;
 use App\Entity\Review;
 use App\Entity\User;
@@ -50,6 +51,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section('Others');
          yield MenuItem::linkToCrud('Review', 'fas fa-list', Review::class);
         yield MenuItem::linkToCrud('Contacts', 'fas fa-list', Contact::class);
+        yield MenuItem::linkToCrud('Hotel Info', 'fas fa-list', HotelContact::class);
         yield MenuItem::linkToCrud('News Letter', 'fas fa-list', NewsLetter::class);
 //        yield MenuItem::linkToCrud('Users', 'fas fa-list', User::class);
     }
